@@ -46,7 +46,6 @@ public class test1 implements ITestListener {
         WebElement next = driver.findElement(By.cssSelector("#login-next"));
         next.click();
         Thread.sleep(3000);
-
         String actualURL = driver.findElement(By.id("password-sign-in")).getText();
         String expectedURL = "SIGN IN";
         Assert.assertEquals(actualURL, expectedURL);

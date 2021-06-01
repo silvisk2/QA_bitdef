@@ -59,6 +59,7 @@ public class test2 {
         Thread.sleep(3000);
         driver.findElement(By.cssSelector("ui-card:nth-of-type(1) > .align-items-start.card-header.p-1")).click();
         Thread.sleep(3000);
+        // test faill after the kit is downloaded, next option is not available
         driver.findElement(By.cssSelector(".bordered.card.clickable-card.gray.ng-star-inserted.raised > .card-header")).click();
         TakesScreenshot ts = (TakesScreenshot) driver;
         File file = ts.getScreenshotAs(OutputType.FILE);
@@ -70,9 +71,5 @@ public class test2 {
         }
         System.out.println("The screenshot is taken");
     }
-
-
-
-
-
 }
+
