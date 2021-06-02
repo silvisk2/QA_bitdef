@@ -1,0 +1,10 @@
+{
+ "name": "Windows",
+ "release": "10 PRO N",
+ "version": "20H2.19042.985",
+ "architecture": [
+ "64bit",
+ "Windows VM"
+ ],
+ "processor": "Intel(R) Core(TM) i5-9600K CPU @ 3.70GHz   3.70 GHz  (2 processors)"
+}

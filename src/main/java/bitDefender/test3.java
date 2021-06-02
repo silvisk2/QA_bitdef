@@ -19,6 +19,7 @@ public class test3 {
     String driverPath = "C:\\Users\\Silviu\\Desktop\\Homework_Capraru\\chromedriver.exe";
     public WebDriver driver;
 
+    // Launching browser
     @BeforeTest
     public void launchBrowser() {
 
@@ -28,13 +29,12 @@ public class test3 {
         driver.get(url);
         driver.manage().window().maximize();
     }
-
+    // To cred logging
     @Test(priority = 1)
     public void emailLogin() {
-
         driver.findElement(By.cssSelector(".btn.primary.solid")).click();
     }
-
+    // Add email & password
     @Test(priority = 2)
     public void passwordEmail() throws InterruptedException {
         long start = System.currentTimeMillis();
@@ -48,13 +48,13 @@ public class test3 {
         driver.findElement(By.id("password_input")).sendKeys("gJFjyfd$^%U7EDf");
         driver.findElement(By.id("password-sign-in")).click();
     }
-
+    //Continue after credentials added
     @Test(priority = 3)
     public void contTrials() throws InterruptedException {
         Thread.sleep(3000);
         driver.findElement(By.id("btn_1597825507")).click();
     }
-
+    // Going to page My Device
     @Test(priority = 4)
     public void myDevices() throws InterruptedException {
         driver.findElement(By.id("a_1580325650")).click();

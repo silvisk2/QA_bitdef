@@ -17,6 +17,7 @@ public class test2 {
     String driverPath = "C:\\Users\\Silviu\\Desktop\\Homework_Capraru\\chromedriver.exe";
     public WebDriver driver;
 
+    //Launch browser
     @BeforeTest
     public void launchBrowser() {
 
@@ -26,11 +27,12 @@ public class test2 {
         driver.get(url);
         driver.manage().window().maximize();
     }
+    // To cred logging
     @Test(priority = 1)
     public void toEmail() {
-
         driver.findElement(By.cssSelector(".btn.primary.solid")).click();
     }
+    // Enter email address & correct password
     @Test(priority = 2)
     public void enterEmailPassword() throws InterruptedException {
         long start = System.currentTimeMillis();
@@ -52,6 +54,7 @@ public class test2 {
             System.out.println("OK");
         }
     }
+    //Continue Next Step after entering credentials
     @Test(priority = 3)
     public void continueTrial() throws InterruptedException {
         Thread.sleep(3000);
